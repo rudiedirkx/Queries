@@ -217,7 +217,7 @@ if ( isset($g_arrSource['q']) && trim($g_arrSource['q']) )
 }
 
 ?>
-<p><a href="pgsql-cli.php">To PGSQL</a></p>
+<p><a href="adminer.php">Go to Adminer</a></p>
 <p>Fav queries: (<a href="#" onclick="var q=prompt('Query:', '');if(q){ var sqs=getFavQs(); sqs.push(q); localStorage.setItem('favqs', JSON.stringify(sqs));listFavQs(); }return false;">new</a>)</p>
 <ul id="favqs"></ul>
 <script>
@@ -312,5 +312,3 @@ function htmlTable($q) {
 	$szHtml .= '</table>'."\n".mysql_num_rows($q).' rows in set. ';
 	return $szHtml;
 }
-
-?>
